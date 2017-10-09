@@ -1,0 +1,20 @@
+once gitkraken is downloaded, sign in to it with your github account
+then access preferences in the top right
+navigate to the authentication tab
+click the generate key and add to git hub button
+
+after that click the file icon in the top left
+choose to clone a repo
+select from github
+choose the project-dante repository
+
+once this is complete, we have gitkraken installed and ready to go
+
+you now have the same unity project that i do
+simply open unity and navigate to the folder you downloaded the repo into
+be careful to select the "project Dante" folder inside the "project-dante" repository
+otherwise, you will create a project that is brand new and has our game inside it
+it causes all sorts of problems
+
+then in the next meeting we can go over how we will gitkraken to work on the game
+
