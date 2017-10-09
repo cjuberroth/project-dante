@@ -8,4 +8,6 @@ public class CharControl : MonoBehaviour
     //was that because of git?
     //adding comment to test git
     //var rch = Physics2D.Raycast()//vector2 origin, vector2 distance, float distance, int layerMask
+
+    //can't utilize unity for auto complete without unity open, wonder if this is subvertible
 }
