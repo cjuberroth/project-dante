@@ -83,6 +83,9 @@
     <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DASkeleton.cs" />
     <Compile Include="Assets\tempScripts\000emptyclass.cs" />
     <Compile Include="Assets\tempScripts\CharControl.cs" />
+    <Compile Include="Assets\tempScripts\ControlParameters.cs" />
+    <Compile Include="Assets\tempScripts\ControlState.cs" />
+    <Compile Include="Assets\tempScripts\Player.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
