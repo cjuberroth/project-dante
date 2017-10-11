@@ -43,6 +43,11 @@ public class Player : MonoBehaviour
         {
             normalizedSpeed = 0;
         }
+
+        if(controller.canJump() && Input.GetKeyDown(KeyCode.Space))
+        {
+            controller.jump();
+        }
     }
 
     private void flip()

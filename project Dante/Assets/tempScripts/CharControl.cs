@@ -20,6 +20,7 @@ public class CharControl : MonoBehaviour
     private Vector3 _localScale;
     private BoxCollider2D _collider;
     private GameObject lastUnderFoot;
+    private float jumpTimer;
 
     private Vector3
         rayOriginTL,
@@ -45,6 +46,13 @@ public class CharControl : MonoBehaviour
         vertRayGap = collisionHeight / (numHorRays - 1);
     }
 
+    public bool canJump()
+    {
+        if (state.onGround)
+            return true;
+        return false;
+    }
+
     public void addForce(Vector2 force)
     {
         _velocity += force;
@@ -65,8 +73,17 @@ public class CharControl : MonoBehaviour
         _velocity.y = y;
     }
 
+    public void jump()
+    {
+        addForce(new Vector2(0, parameters.jumpHeight));
+        jumpTimer = parameters.timeBetweenJumps;
+    }
+
     public void LateUpdate()
     {
+        jumpTimer -= Time.deltaTime;
+
+        _velocity.y += parameters.gravity * Time.deltaTime;
         Move(velocity * Time.deltaTime);
     }
 
@@ -84,6 +101,12 @@ public class CharControl : MonoBehaviour
         }
 
         transform.Translate(moveChange, Space.World);
+
+        if(Time.deltaTime > 0)
+            _velocity = moveChange / Time.deltaTime;
+
+        _velocity.x = Mathf.Min(_velocity.x, parameters.maxVel.x);
+        _velocity.y = Mathf.Min(_velocity.y, parameters.maxVel.y);
     }
 
     private void calcRayOrigin()
@@ -100,7 +123,7 @@ public class CharControl : MonoBehaviour
     private void moveVertical(ref Vector2 moveChange)
     {
         var goingUp = moveChange.y > 0;
-        var rayLength = Mathf.Abs(moveChange.y + skin);
+        var rayLength = Mathf.Abs(moveChange.y) + skin;
         var rayPoint = goingUp ? Vector2.up : -Vector2.up;
         var rayOrigin = goingUp ? rayOriginTL : rayOriginBL;
 
@@ -111,6 +134,7 @@ public class CharControl : MonoBehaviour
         {
             var ray = new Vector2(rayOrigin.x + (i * horRayGap), rayOrigin.y);
             var rayCastHit = Physics2D.Raycast(ray, rayPoint, rayLength, layerMask);
+            Debug.DrawRay(ray, rayPoint * rayLength, Color.red);
             if (!rayCastHit)
                 continue;
 
@@ -124,7 +148,7 @@ public class CharControl : MonoBehaviour
                 }
             }
 
-            moveChange.y = rayCastHit.point.y - rayPoint.y;
+            moveChange.y = rayCastHit.point.y - ray.y;
             rayLength = Mathf.Abs(moveChange.y);
             if (goingUp)
             {
