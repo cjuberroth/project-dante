@@ -1,0 +1,15 @@
+trello list still includes: clone, jumpity joe, campfire healing
+
+next on my list will likely be the clone property, being the cornerstone of our game
+my current working theory is that i need to add another mask that player collides with
+that mask will only be for clones
+then upon right mouse click, create game object player clone
+transparency this down
+while right clicked, clone copies action of player
+then need to store it somehow
+then loop it
+will likely need some kind of escape key to delete clones
+
+First things first:
+
+get the right mouse to create clone that stays put
