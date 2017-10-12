@@ -9,6 +9,7 @@ public class CharControl : MonoBehaviour
     private const int numVertRays = 4;
 
     public LayerMask layerMask;
+    public LayerMask cloneMask;
     public ControlParameters parameters;
     public ControlState state;
     public bool colliding { get; set; }
@@ -133,7 +134,7 @@ public class CharControl : MonoBehaviour
         for(var i = 0; i < numVertRays; i++)
         {
             var ray = new Vector2(rayOrigin.x + (i * horRayGap), rayOrigin.y);
-            var rayCastHit = Physics2D.Raycast(ray, rayPoint, rayLength, layerMask);
+            var rayCastHit = Physics2D.Raycast(ray, rayPoint, rayLength, layerMask | cloneMask);
             Debug.DrawRay(ray, rayPoint * rayLength, Color.red);
             if (!rayCastHit)
                 continue;
@@ -177,7 +178,7 @@ public class CharControl : MonoBehaviour
         {
             var ray = new Vector2(rayOrigin.x, rayOrigin.y + (i * vertRayGap));
 
-            var rayCastHit = Physics2D.Raycast(ray, rayPoint, rayLength, layerMask);
+            var rayCastHit = Physics2D.Raycast(ray, rayPoint, rayLength, layerMask | cloneMask);
             if (!rayCastHit)
                 continue;
 
