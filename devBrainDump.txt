@@ -13,3 +13,11 @@ will likely need some kind of escape key to delete clones
 First things first:
 
 get the right mouse to create clone that stays put
+
+I'm thinking right now that it might be best to handle the clone like a moving platform
+during the input, the player script could collect an array of transforms and then the clone would follow that set of transforms as a path
+if this will work then i need to concept out the collision between the character and clone during creation
+
+first things first: lets get a clone working on a path
+
+##Show Change##
