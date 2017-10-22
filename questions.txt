@@ -11,6 +11,17 @@ How do we want things in the gui?
 1) means it should always show
 2) means it should show if a certain key is held (E for example)
 	
-what things cause us to lose health
-lives? 5
-how many? 
+what things cause us to lose health? spikes
+lives? yes
+how many? 5
+
+Clone Physics:
+	* No gravity
+	* TEST: Physics w/respect to Lou:
+		case 1: Clone is only solid if landed upon (it's a pass-through platform)
+		case 2: Clone is solid from all angles
+	* Clone has physics w/respect to other level elements?
+	* If they record and don't move, push original Lou up.
+	* If you die while recording, what happens?
+	* Clones erased on death or no?
+	
