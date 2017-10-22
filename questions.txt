@@ -1,4 +1,4 @@
 How do we want things in the gui
 what things cause us to lose health
-lives?
-how many?
+lives? 5
+how many? 
