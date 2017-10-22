@@ -1,4 +1,16 @@
-How do we want things in the gui
+How do we want things in the gui? 
+	2) Lives (signaled by sunglasses); 
+	1) health (fire symbol next to meter that is on a scale of 100 health); 
+	2) which major keys you've collected; 
+	2) which minor keys you have on hand;
+	1) # copies existing, lined up with unused greyed out;
+	2) $ amount (from coins, stars, and diamonds;
+	2) if Jesse's Fedora is owned, show that;
+	2) World name, level name;
+	
+1) means it should always show
+2) means it should show if a certain key is held (E for example)
+	
 what things cause us to lose health
 lives? 5
 how many? 
