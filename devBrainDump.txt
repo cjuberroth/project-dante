@@ -1,23 +1,8 @@
-trello list still includes: clone, jumpity joe, campfire healing
+clone mechanics:
+-right mouse hold begins and ends "recording"
+-each frame save the position of lou
+-upon releasing the right mouse button, instantiate a clone with a path of transforms saved during "record"
 
-next on my list will likely be the clone property, being the cornerstone of our game
-my current working theory is that i need to add another mask that player collides with
-that mask will only be for clones
-then upon right mouse click, create game object player clone
-transparency this down
-while right clicked, clone copies action of player
-then need to store it somehow
-then loop it
-will likely need some kind of escape key to delete clones
+for pure test, will need to create death
 
-First things first:
-
-get the right mouse to create clone that stays put
-
-I'm thinking right now that it might be best to handle the clone like a moving platform
-during the input, the player script could collect an array of transforms and then the clone would follow that set of transforms as a path
-if this will work then i need to concept out the collision between the character and clone during creation
-
-first things first: lets get a clone working on a path
-
-##Show Change##
+variable jump height created will require alteration to the jump method and how it computes.
