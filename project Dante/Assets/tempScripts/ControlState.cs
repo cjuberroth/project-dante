@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ControlState
 {
+    public bool jumpJoe = true;
     public bool collideRight { get; set; }
     public bool collideLeft { get; set; }
     public bool collideAbove { get; set; }

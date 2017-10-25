@@ -317,17 +317,17 @@ MonoBehaviour:
   m_IgnoreNextPostprocessEvent: 0
   m_SelectedAssetPath: Assets/Practice Textures/textures.png
   m_Selected:
-    m_Name: 
+    m_Name: green
     m_OriginalName: 
     m_Pivot: {x: 0, y: 0}
-    m_Alignment: 0
+    m_Alignment: 6
     m_Border: {x: 0, y: 0, z: 0, w: 0}
     m_Rect:
       serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
+      x: 131
+      y: 1582
+      width: 256
+      height: 256
     m_Outline: []
     m_PhysicsShape: []
     m_TessellationDetail: 0
@@ -379,9 +379,9 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e260000
-    m_LastClickedID: 9854
-    m_ExpandedIDs: 00000000262600004e2600007e26000002280000
+    m_SelectedIDs: 84260000
+    m_LastClickedID: 9860
+    m_ExpandedIDs: 000000002a26000052260000822600000228000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -409,7 +409,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000262600004e2600007e26000002280000
+    m_ExpandedIDs: 000000002a260000522600008226000002280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -434,8 +434,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 82f1ffff
-    m_LastClickedInstanceID: -3710
+    m_SelectedInstanceIDs: f0fbffff
+    m_LastClickedInstanceID: -1040
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 20240000b824000070090200282400002a25000036250000bc24000076240000662600002e260000
     m_RenameOverlay:
@@ -490,7 +490,7 @@ MonoBehaviour:
     y: 92
     width: 280
     height: 624
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 300}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
@@ -525,8 +525,8 @@ MonoBehaviour:
     height: 353
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c2faffff
-    m_LastClickedID: -1342
+    m_SelectedIDs: f0fbffff
+    m_LastClickedID: -1040
     m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

@@ -22,6 +22,7 @@ public class CharControl : MonoBehaviour
     private BoxCollider2D _collider;
     private GameObject lastUnderFoot;
     private float jumpTimer;
+    public int cloneTicker;
 
     private Vector3
         rayOriginTL,
@@ -34,6 +35,7 @@ public class CharControl : MonoBehaviour
 
     public void Awake()
     {
+        cloneTicker = 0;
         colliding = true;
         state = new ControlState();
         _transform = transform;
@@ -51,6 +53,10 @@ public class CharControl : MonoBehaviour
     {
         if (state.onGround)
             return true;
+        if (state.jumpJoe && parameters.airJumpsAllowed > 0)
+        {
+            return true;
+        }
         return false;
     }
 
@@ -76,8 +82,15 @@ public class CharControl : MonoBehaviour
 
     public void jump()
     {
-        addForce(new Vector2(0, parameters.jumpHeight));
+        addForce(new Vector2(0, parameters.maxJumpHeight));
         jumpTimer = parameters.timeBetweenJumps;
+    }
+
+    public void stopJump()
+    {
+        if (_velocity.y > parameters.minJumpHeight)
+            setVertForce(0f);
+        //jumpTimer = parameters.timeBetweenJumps;
     }
 
     public void LateUpdate()
@@ -160,6 +173,7 @@ public class CharControl : MonoBehaviour
             {
                 moveChange.y += skin;
                 state.collideBelow = true;
+                parameters.airJumpsAllowed = 2;
             }
 
             if (rayLength < skin + .0001f)
