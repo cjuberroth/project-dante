@@ -22,7 +22,6 @@ public class CharControl : MonoBehaviour
     private BoxCollider2D _collider;
     private GameObject lastUnderFoot;
     private float jumpTimer;
-    public int cloneTicker;
 
     private Vector3
         rayOriginTL,
@@ -35,7 +34,6 @@ public class CharControl : MonoBehaviour
 
     public void Awake()
     {
-        cloneTicker = 0;
         colliding = true;
         state = new ControlState();
         _transform = transform;

@@ -81,10 +81,8 @@
     <Compile Include="Assets\Gordo\Prefabs\DALogo\Scripts\DALogo.cs" />
     <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DALimb.cs" />
     <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DASkeleton.cs" />
-    <Compile Include="Assets\tempScripts\000emptyclass.cs" />
     <Compile Include="Assets\tempScripts\CamControl.cs" />
     <Compile Include="Assets\tempScripts\CharControl.cs" />
-    <Compile Include="Assets\tempScripts\cloneControl.cs" />
     <Compile Include="Assets\tempScripts\ControlParameters.cs" />
     <Compile Include="Assets\tempScripts\ControlState.cs" />
     <Compile Include="Assets\tempScripts\Player.cs" />

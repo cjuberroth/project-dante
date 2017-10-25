@@ -13,18 +13,10 @@ public class Player : MonoBehaviour
     public float groundAccel = 10f;
     public float airAccel = 5f;
 
-    public Vector3
-        cloneStart,
-        cloneFinish;
-
-    public Transform[] clonePath;
-
     public void Awake()
     {
         controller = GetComponent<CharControl>();
         facingRight = transform.localScale.x > 0;
-        cloneStart = Vector3.zero;
-        cloneFinish = Vector3.zero;
     }
 
     public void Update()
