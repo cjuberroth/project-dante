@@ -1,0 +1,8 @@
+clone mechanics:
+-right mouse hold begins and ends "recording"
+-each frame save the position of lou
+-upon releasing the right mouse button, instantiate a clone with a path of transforms saved during "record"
+
+for pure test, will need to create death
+
+variable jump height created will require alteration to the jump method and how it computes.
