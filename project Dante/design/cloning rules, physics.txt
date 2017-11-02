@@ -1,25 +1,26 @@
 Cloning Rules & Physics
-	
-	Clone Recording Time: up to and including 5 seconds by default; 
-						  up to and including 10 seconds if Lou has learned Dosidy-Doe.
-	Physics:
-		Collision with respect to Lou: Clone(s) are solid.
-		Clones with respect to each other: Clone(s) are solid, since Lou is.
-		Collision with respect to other level elements: This will vary; when coming up with level designs,
-														I will determine particular objects, enemies, and hazards
-														to be "Clone Physical" ('CP') This would, for example, be
-														pertinent to a puzzle where Lou has to have a clone use
-														Heavity-Ho to pull out a level element that will retract
-														as soon as he lets go; by contrast, his clones shouldn't
-														run into all enemies.
+		Clones and Items: While recording, items collected by Lou are added to his inventory. Health recovered is retained after
+						  recording. Clones themselves have no relationship to items or health.
+		Cloning and location: After a recording is ended by the player or by time elapsed, Lou will disappear and respawn
+							  in the location he was before the record key was hit for that particular clone.
+		Clone Recording Time: up to and including 5 seconds by default; 
+						      up to and including 10 seconds if Lou has learned Dosidy-Doe.
 		Cloning while idle: Lou is pushed up to stand on top of the clone.
-		Death: If Lou dies while recording a clone, he simply resets to where he was before he began recording.
-			   Clones are persistent through death, unless Game Over is triggered, in which case clones are destroyed.
-		Gravity: None
+		Collision with respect to Lou: Clone(s) are solid if Lou is above them. Otherwise, they act as pass-through platforms.
+									   This will enable the player to build "clone ladders," and to navigate narrow vertical areas
+									   without unnecessary frustration.
+		Collision with respect to other level elements: Clones have  no collision with other level elements. However,
+														certain level elements still react to clones as though they are Lou.
+														For example, if a clone uses Heavity-Ho on a crate, the crate will
+														move as though it was Lou using Heavity-Ho. Enemy AI do not react
+														to clones.
+		Damage while recording: Lou can take damage while recording, and his health is not restored after recording is finished.
+		Death: If Lou dies while recording a clone, he simply resets to where he was before he began recording. The recording is
+			   canceled and cloning is considered a failed process. Clones successfully recorded are persistent through death, 
+			   unless Game Over is triggered, in which case clones are destroyed.
+		Destroying Clones: Clones can only be destroyed by the player by recording a new clone over the particular one, or by undoing
+						   a recording. Clones cannot take damage and cannot be destroyed by any entity other than the player.
+		Gravity for Clones: None
 		World: Clones are persistent throughout all levels. That is, if Lou records and leaves a clone in Level A, he can
-			   can go to Level Z and the clone will still be in Level A until replaced. This will set up for cross-level
+			   can go to Level Z and the clone will still be in Level A until replaced. This will set up cross-level
 			   puzzle-solving.		
-		
-	* TEST: Physics w/respect to Lou: /STILL TBD
-		case 1: Clone is only solid if landed upon (it's a pass-through platform)
-		case 2: Clone is solid from all angles
